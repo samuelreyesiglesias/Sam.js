@@ -7,7 +7,7 @@
 .example_of_class{
 	background-color:black;
 	color:white;
-	font-size:40pt'
+	font-size:40pt;
 }
 </style>
 
