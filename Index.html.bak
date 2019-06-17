@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<style>
+.example_of_class{
+	background-color:black;
+	color:white;
+	font-size:40pt'
+}
+</style>
+
+<div id=NEW_1>
+hola
+</div>
+<script src="St.js"></script>
+</body>
+</html>
