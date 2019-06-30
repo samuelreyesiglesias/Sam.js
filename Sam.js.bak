@@ -17,13 +17,23 @@ function $(identifier){ //gets a node
 
 //GETTING NODES
 function $id(id){
-	return document.getElementById(id);
+	if(id.indexOf("#")==-1){
+		return document.getElementById(id);
+	}else{
+		id=id.replace("#","");
+		return document.getElementById(id);		
+	}
 }
 function $name(identifier){
-	return document.getElementsByName(identifier);
+		return document.getElementsByName(identifier);
 }
-function $className(identifier){
-	return document.getElementsByClassName(identifier);
+function $className(id){
+	if(id.indexOf(".")==-1){
+		return document.getElementsByName(id);
+	}else{
+		id=id.replace(".","");
+		return document.getElementsByClassName(id);
+	}
 }
 function $tagName(identifier){
 	return document.getElementsByTagName(identifier);
@@ -80,14 +90,11 @@ function $_class(theNode,theClass){
 
 
 
-class St{
-	constructor(name) {
-		this.name = name;
+class Actions{
+	
+	constructor() {
 	}
-	sayHi(){
-		alert(this.name);
-	}
-	a(str) { alert(str); }
+	
 }
 
 
@@ -126,13 +133,37 @@ class St{
 	//var instancia2=new St("Stefany");
 	//instancia2.sayHi();
 	
-	
+
+/*	
 	var input_nombre = $_("input");
 	input_nombre.id = "input_nombre";
 	$_add("body",input_nombre);
 	
 	$_atr("input_nombre","style","border-radius:20px;background-color:#efefef;color:#333366;font:bold 11pt arial;padding:5px;border:solid 1px silver");
 	$_atr("input_nombre","placeholder","por favor digite su usuario");
+*/
+
+
+	/*
+	var patron_nit = new Array(4,6,3,1)
+	var patron_dui = new Array(8,1)
+	var patron_tel = new Array(4,4)
+	*/
+	
+	//You can access an element by id using an # or the id string of the element directly
+	//alert($id("Mascara")); //way 1
+	//alert($id("#Mascara")); //way 2
+	
+	
+	alert($(".AClassName")); //way 2
+	
+	
+	
+	alert("ok");
+	var A=new Actions();
+	//var patron_dui = new Array(8,1);
+	
+	//acciones.Mask($("Mascara"),'-',patron_dui,true);
 	
 	
 })();
