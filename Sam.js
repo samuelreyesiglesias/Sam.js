@@ -47,9 +47,7 @@ function $(identifier,theAction=false){ //gets a node
 
 
 //GETTING NODES
-
-//var $id = $id || {};
-
+//Getting a node by its ID Name
 function $id(id){
 	var internalNode;
 	if(id.indexOf("#")==-1){
@@ -61,10 +59,11 @@ function $id(id){
 	return internalNode;
 }
 
-
+//Getting a node using its name 
 function $name(identifier){
 		return document.getElementsByName(identifier);
 }
+//Getting a node using the Class Name 
 function $className(id){
 	if(id.indexOf(".")==-1){
 		return document.getElementsByName(id);
@@ -73,9 +72,11 @@ function $className(id){
 		return document.getElementsByClassName(id);
 	}
 }
+//Getting a node using the tag Name of the Element
 function $tagName(identifier){
 	return document.getElementsByTagName(identifier);
 }
+//Getting a node using its tag name space
 function $tagNameNs(identifier){
 	return document.getElementsByTagNameNS(identifier);
 }
@@ -84,6 +85,8 @@ function $tagNameNs(identifier){
 function $_(typeOfNode){ //create a node
 	return document.createElement(typeOfNode);
 }
+
+//Adding a new node to a parent Element
 function $_add(aParentNode,aChild){ // add a node
 	if(typeof aParentNode=="object"){
 		aParentNode.appendChild(aChild);
@@ -96,6 +99,8 @@ function $_add(aParentNode,aChild){ // add a node
 		}
 	}
 }
+
+//Deleting a node
 function $_del(theNode){
 	if(typeof theNode=="object"){
 		var currentNode = theNode;
@@ -106,6 +111,7 @@ function $_del(theNode){
 	}
 }
 
+//Setting an attribute to one node  
 function $_atr(theNode,theAttribute,theValue){
 	if(typeof theNode=="object"){
 		var currentNode = theNode;
@@ -116,6 +122,7 @@ function $_atr(theNode,theAttribute,theValue){
 	}
 }
 
+//Adding a new Class to one node
 function $_class(theNode,theClass){
 	if(typeof theNode=="object"){
 		var currentNode = theNode;
