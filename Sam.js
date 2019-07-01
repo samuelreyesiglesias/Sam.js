@@ -3,6 +3,7 @@
 //[Free License]
 //if you want to notify some problem or want to collaborate in this project please 
 //send me a message to samuelreyesiglesias@gmail.com
+//THanks for using this..
 
 //Easy way to access a node and change some of its attributes
 function $(identifier,theAction=false){ //gets a node 
