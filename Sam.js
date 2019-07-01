@@ -1,6 +1,7 @@
 
 
 
+//Easy way to access a node and change some of its attributes
 function $(identifier,theAction=false){ //gets a node 
 	action=null;
 	var theNode;
